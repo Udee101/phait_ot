@@ -1,14 +1,8 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-import HelloWorld from "../components/HelloWorld.vue";
-console.log('This runs in your terminal, not the browser!');
+import SiteLayout from "../layout/SiteLayout.astro"
 ---
-<!-- Below is your "component template." It's just HTML, but with some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <div id="app">
-      <HelloWorld msg="Hello World" />
-    </div>
-  </body>
-</html>
+<SiteLayout>
+  <section>
+    <h1>Home Page</h1>
+  </section>
+</SiteLayout>
