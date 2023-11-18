@@ -1,0 +1,40 @@
+---
+import { x, instagram, linkedIn, mail} from "../assets";
+import Socials from "./Socials.astro";
+
+const socialHandles = [
+  {
+    url: '#x',
+    imgSrc: x,
+    altText: 'twitter icon'
+  },
+  {
+    url: '#ig',
+    imgSrc: instagram,
+    altText: 'instagram icon'
+  },
+  {
+    url: '#li',
+    imgSrc: linkedIn,
+    altText: 'linkedIn icon'
+  },
+  {
+    url: '#mail',
+    imgSrc: mail,
+    altText: 'mail icon'
+  },
+];
+
+const siteYear = new Date().getFullYear()
+---
+
+<footer class="p-4 absolute bottom-0 w-full">
+  <div class="max-w-custom mx-auto grid gap-4 place-items-center">
+    <div class="flex items-center gap-3">
+      {socialHandles.map((el) => <Socials data={el} />)}
+    </div>
+    <p class="flex items-center opacity-60">&copy; 
+      <span class="text-sm">Copyright {siteYear}. Faith Okoh</span>
+    </p>
+  </div>
+</footer>

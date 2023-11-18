@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  data: {
+    url: string
+    imgSrc: ImageMetadata
+    altText: string
+  }
+} 
+
+const { data } = Astro.props;
+---
+
+<a href={data.url} class="w-6" >
+  <Image src={data.imgSrc} alt={data.altText} />
+</a>
