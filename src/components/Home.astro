@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import {vid} from '../assets/index.js'
+---
+
+<section id="home" class="p-4 translate-y-40">
+	<div class="max-w-custom mx-auto">
+		<div class="w-full md:h-[60vh]">
+			<Image src={vid} alt="images" class="w-full md:object-cover md:h-full" />
+		</div>
+	</div>
+</section>
